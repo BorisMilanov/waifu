@@ -1,0 +1,13 @@
+<div>
+    <input [(ngModel)]="searchTag" placeholder="Enter tag (e.g., raiden-shogun, maid)">
+    <!-- Removed height input as it's no longer used -->
+    <!-- <input [(ngModel)]="height" placeholder="Enter minimum height (e.g., >=2000)"> -->
+    <button (click)="search()">Search</button>
+  </div>
+  
+  <div *ngIf="results">
+    <div *ngFor="let result of results">
+      <img [src]="result.url" alt="Waifu Image">
+    </div>
+  </div>
+  
